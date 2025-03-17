@@ -62,6 +62,10 @@ app.use((req, res, next) => {
   next();
 })
 
+app.get("/", (req, res) => {
+  res.send("Welcome to the Car Rental API");
+});
+
 // API Routes
 app.use('/api/auth', authRoutes);
 app.use('/api/cars', carRoutes);
@@ -71,6 +75,7 @@ app.use('/api/wallet', walletRoutes);
 app.use('/api/payments', paymentRoutes);
 app.use('/api/transactions', transactionRoutes);
 app.use('/api/dashboard', dashboardRoutes);
+
 
 // 404 handler for undefined routes
 app.use((req, res, next) => {
