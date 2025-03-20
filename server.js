@@ -29,7 +29,7 @@ connectDB().catch(err => {
 
 // Middleware
 app.use(cors({
-  origin: process.env.CLIENT_URL || 'https://1-car-4-rentals.netlify.app', // Remove trailing slash
+  origin: process.env.CLIENT_URL || 'https://carfront.vercel.app', // Remove trailing slash
   credentials: true,
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
   allowedHeaders: ['Content-Type', 'Authorization']
